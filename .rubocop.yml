@@ -1,0 +1,249 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+
+AllCops:
+  DisplayCopNames: true
+  Exclude:
+    - 'vendor/**/*'
+    - 'db/schema.rb'
+    - 'config/deploy.rb'
+    - 'bin/**/*'
+    - 'node_modules/**/*'
+    - 'db/fixtures/**/*'
+    - 'app/controllers/mock/*'
+
+Rails:
+  Enabled: true
+
+Rails/DynamicFindBy:
+  AutoCorrect: false
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - test
+    - staging
+
+#Rails/SkipsModelValidations:
+#  Enabled: false
+#
+#Rails/CreateTableWithTimestamps:
+#  Enabled: false
+
+Metrics/BlockLength:
+  Max: 150
+  Exclude:
+    - 'spec/**/*'
+    - 'config/routes.rb'
+
+Security/YAMLLoad:
+  Exclude:
+    - 'db/seeds.rb'
+
+Metrics/AbcSize:
+  Max: 100
+
+Layout/LineLength:
+  Max: 400
+
+Metrics/ClassLength:
+  Max: 1000
+
+Metrics/ModuleLength:
+  Max: 500
+
+Metrics/MethodLength:
+  Max: 150
+
+Metrics/CyclomaticComplexity:
+  Max: 20
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Max: 9
+
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: space
+
+Layout/SpaceInsideBlockBraces:
+  EnforcedStyle: space
+  EnforcedStyleForEmptyBraces: space
+
+Layout/SpaceAroundEqualsInParameterDefault:
+  EnforcedStyle: space
+
+Layout/CommentIndentation:
+  Enabled: false
+
+Layout/FirstArrayElementIndentation:
+  Enabled: false
+  IndentationWidth: 4
+
+Layout/CaseIndentation:
+  EnforcedStyle: end
+  IndentationWidth: 4
+
+Layout/FirstArgumentIndentation:
+  IndentationWidth: 4
+
+# TODO: https://github.com/rubocop-hq/rubocop/issues/5975
+# falseなのでauto-correctが効かない
+Layout/ClosingParenthesisIndentation:
+  Enabled: false
+
+Layout/FirstHashElementIndentation:
+  IndentationWidth: 4
+  EnforcedStyle: consistent
+
+Layout/AssignmentIndentation:
+  IndentationWidth: 4
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+  IndentationWidth: 4
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+  IndentationWidth: 4
+
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+  IndentationWidth: 4
+
+Layout/MultilineMethodCallBraceLayout:
+  EnforcedStyle: symmetrical
+
+Layout/MultilineMethodDefinitionBraceLayout:
+  EnforcedStyle: symmetrical
+
+Layout/HashAlignment:
+  EnforcedLastArgumentHashStyle: always_inspect
+
+Layout/ElseAlignment:
+  Enabled: false
+
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: variable
+
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_fixed_indentation
+  IndentationWidth: 4
+
+# 3桁区切りにアンダースコアが入るやつ
+Style/NumericLiterals:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/RegexpLiteral:
+  Enabled: false
+
+Style/NumericPredicate:
+  Enabled: false
+
+Style/WordArray:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Style/RescueStandardError:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/Next:
+  Enabled: false
+
+Style/ConditionalAssignment:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Naming/VariableNumber:
+  Enabled: false
+
+Style/RaiseArgs:
+  EnforcedStyle: compact
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Naming/MethodParameterName:
+  Enabled: false
+
+Style/ZeroLengthPredicate:
+  Enabled: false
+
+Style/SafeNavigation:
+  Enabled: false
+
+Style/MultilineBlockChain:
+  Enabled: false
+
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: true
+
+Lint/MixedRegexpCaptureTypes:
+  Enabled: true
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
+
+Style/ExponentialNotation:
+  Enabled: true
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
+Style/RedundantRegexpCharacterClass:
+  Enabled: true
+
+Style/RedundantRegexpEscape:
+  Enabled: true
+
+Style/SlicingWithRange:
+  Enabled: true
+
+Style/RedundantFetchBlock:
+  Enabled: true
