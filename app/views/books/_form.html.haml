@@ -1,0 +1,10 @@
+= render 'errors'
+= form_for @book do |f|
+  %div.field
+    = f.label :title, 'Title'
+    = f.text_field :title, class: 'book_title'
+  %div.field
+    = f.label :body, 'Body'
+    = f.text_area :body, class: 'book_body'
+  %div.actions
+    = f.submit "#{btn_name} Book"

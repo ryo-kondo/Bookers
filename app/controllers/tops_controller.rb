@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
 class TopsController < ApplicationController
-  def index; end
+  def index
+  end
 end
