@@ -1,2 +1,9 @@
-%h1 Books#show
-%p Find me in app/views/books/show.html.haml
+%p
+  %strong Title:
+  = @book.title
+%p
+  %strong Body:
+  = @book.body
+= link_to 'Edit', edit_book_path(@book.id)
+|
+= link_to 'Back', :back

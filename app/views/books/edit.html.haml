@@ -1,2 +1,5 @@
-%h1 Books#edit
-%p Find me in app/views/books/edit.html.haml
+%h1 Editing Book
+= render partial: 'form', locals: { btn_name: 'Update' }
+= link_to 'Show', book_path(@book.id)
+|
+= link_to 'Back', :back

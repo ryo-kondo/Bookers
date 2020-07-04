@@ -19,4 +19,5 @@
         %td
           = link_to 'Destroy', book_path(book.id), method: :delete, 'data-confirm' => 'Are you sure?'
 
-= render 'form'
+%h2 New book
+= render partial: 'form', locals: { btn_name: 'Create' }
