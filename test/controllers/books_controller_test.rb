@@ -1,24 +1,25 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class BooksControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
+  test 'should get index' do
     get books_index_url
     assert_response :success
   end
 
-  test "should get show" do
+  test 'should get show' do
     get books_show_url
     assert_response :success
   end
 
-  test "should get new" do
+  test 'should get new' do
     get books_new_url
     assert_response :success
   end
 
-  test "should get edit" do
+  test 'should get edit' do
     get books_edit_url
     assert_response :success
   end
-
 end
